@@ -20,9 +20,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* <input type="text" onChange={handleChange}></input> */}
-      {/* <button onClick={handleClick}>Search</button> */}
-      <Cocktails />
+      <div className="wave">
+        {/* <input type="text" onChange={handleChange}></input> */}
+        {/* <button onClick={handleClick}>Search</button> */}
+        <Cocktails />
+      </div>
     </div>
   );
 }

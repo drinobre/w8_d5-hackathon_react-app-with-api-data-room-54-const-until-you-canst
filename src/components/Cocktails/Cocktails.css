@@ -52,3 +52,7 @@ nav {
   padding-right: 60px;
   border-radius: 15px;
 }
+
+.cocktail-div {
+  background-image: url("../../../public/wave.svg");
+}

@@ -40,24 +40,26 @@ function Cocktails() {
   // <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>;
   return cocktail ? (
     <div>
-      <nav>
-        <h1 id="title">Cocktail Friend</h1>
-      </nav>
-      <div id="search-box">
-        <TextField
-          id="outlined-basic"
-          label="Search for a cocktail..."
-          variant="outlined"
-          onChange={handleChange}
-        />
+      <div className="cocktail-div">
+        <nav>
+          <h1 id="title">Cocktail Friend</h1>
+        </nav>
+        <div id="search-box">
+          <TextField
+            id="outlined-basic"
+            label="Search for a cocktail..."
+            variant="outlined"
+            onChange={handleChange}
+          />
 
-        <div id="input-field-div">
-          <Button id="search-btn" variant="contained" onClick={handleClick}>
-            Search Cocktails
-          </Button>
+          <div id="input-field-div">
+            <Button id="search-btn" variant="contained" onClick={handleClick}>
+              Search Cocktails
+            </Button>
+          </div>
         </div>
+        <Cocktail cocktail={cocktail} />
       </div>
-      <Cocktail cocktail={cocktail} />
     </div>
   ) : (
     <>Nothing here yet</>
