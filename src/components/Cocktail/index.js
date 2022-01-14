@@ -1,12 +1,13 @@
 import React from "react";
 import IngredientsList from "../IngredientsList";
 
-function Cocktail({ name, image }) {
+function Cocktail({ cocktail }) {
+  const ct = cocktail.drinks[0];
   return (
     <div>
-      <h1>Name of cocktail</h1>
-      <img src="" alt="Cocktail" />
-      <IngredientsList />
+      <h1>{cocktail.drinks[0].strDrink}</h1>
+      <img src={ct.strDrinkThumb} alt="Cocktail" />
+      <IngredientsList ingredients={cocktail} />
     </div>
   );
 }
