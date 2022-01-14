@@ -27,10 +27,11 @@ function Cocktails({ cockSearch }) {
   }
   console.log(cocktail);
 
+  <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>;
   return cocktail ? (
     <div>
       <button onClick={handleClick}></button>
-      <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>
+      <h1>WEBSITEZ</h1>
       <Cocktail cocktail={cocktail} />
     </div>
   ) : (
