@@ -22,7 +22,7 @@ function Cocktails({ cockSearch }) {
   useEffect(() => {
     fetchCock();
     console.log("Data is here", cocktail);
-  }, []);
+  }, [cocktail]);
 
   function handleClick() {
     console.log("HANDLE CLICK FUNCTION");
