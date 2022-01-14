@@ -2,11 +2,11 @@ import React from "react";
 
 function Ingredients() {
   // check beginning of key, if it is ingredient, put it in array .startsWith
-function getIngredients(item){
-  if({...item}.includes('Ing'){
-    let ingredientArray = item.
-  })
-}
+  function getIngredients(item) {
+    // if({...item}.includes('Ing'){
+    //   let ingredientArray = item.
+    // })
+  }
 
   return (
     <div>
