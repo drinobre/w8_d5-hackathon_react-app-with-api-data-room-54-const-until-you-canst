@@ -20,13 +20,14 @@ function Cocktails({ cockSearch }) {
   useEffect(() => {
     fetchCock();
     console.log("Data is here", cocktail);
-  }, [handleClick]);
+  }, []);
 
   function handleClick() {
     console.log("HANDLE CLICK FUNCTION");
   }
+  console.log(cocktail);
 
-  return setCocktail ? (
+  return cocktail ? (
     <div>
       <button onClick={handleClick}></button>
       <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>
