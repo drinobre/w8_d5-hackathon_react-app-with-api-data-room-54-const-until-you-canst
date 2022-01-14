@@ -1,6 +1,6 @@
 import React from "react";
 
-function Ingredients() {
+function Ingredients({ ingredients }) {
   // check beginning of key, if it is ingredient, put it in array .startsWith
   function getIngredients(item) {
     // if({...item}.includes('Ing'){
