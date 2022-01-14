@@ -1,15 +1,12 @@
 import "./App.css";
 import Cocktails from "../Cocktails";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 function App() {
-  //const textInput = useRef("");
-  const [inputUser, setInputUser] = useState("Mulled Wine");
-  const [cockSearch, setCockSearch] = useState("Mulled Wine");
+  const [inputUser, setInputUser] = useState("");
+  const [cockSearch, setCockSearch] = useState("");
 
   function handleChange(event) {
-    //textInput = event.target.value;
-    // console.log(textInput);
     setInputUser(event.target.value);
     console.log(inputUser);
   }
@@ -25,7 +22,6 @@ function App() {
         <input type="text" onChange={handleChange} />
         <button onClick={handleClick}>Search</button>
         <Cocktails input={cockSearch} />
-        {/* <Cocktails /> */}
       </div>
     </div>
   );

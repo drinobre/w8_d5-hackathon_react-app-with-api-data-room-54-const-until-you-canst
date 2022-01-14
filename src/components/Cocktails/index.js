@@ -7,29 +7,17 @@ import { useState, useEffect } from "react";
 
 //https://www.thecocktaildb.com/api/json/v1/1/random.php
 
-function Cocktails({ input, cocktail }) {
-  // const [cocktail, setCocktail] = useState("");
-  // const [btnClick, setBtnClick] = useState(false);
-
+function Cocktails({ input }) {
   const [cockSearch, setCockSearch] = useState("");
-
-  // users add input
-  // users click on the button
-  // input is storage and use on the url for search
-  // fetch API based on the input
 
   useEffect(() => {
     fetchCock();
-    // setBtnClick(false);
   }, [input]);
 
   async function fetchCock() {
     try {
       const response = await fetch(
-        // `www.thecocktaildb.com/api/json/v1/1/search.php?s=${input}`
-        // `www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`
         `https://thecocktaildb.com/api/json/v1/1/search.php?s=${input}`
-        // `https://www.thecocktaildb.com/api/json/v1/1/random.php`
       );
       const data = await response.json();
       console.log(response);
@@ -40,16 +28,6 @@ function Cocktails({ input, cocktail }) {
       console.log("ERROR HERE");
     }
   }
-
-  // function handleChange(event) {
-  //   setCockSearch(event.target.value);
-  // }
-  // console.log(cockSearch);
-
-  // function handleClick() {
-  //   setBtnClick(true);
-  // }
-  // console.log(cocktail);
 
   return cockSearch ? (
     <div>
@@ -71,9 +49,7 @@ function Cocktails({ input, cocktail }) {
             </Button> */}
           </div>
         </div>
-        {/* <h1>{cockSearch.drinks[0].strDrink}</h1> */}
         <Cocktail cocktail={cockSearch} />
-        {/* <p>Display {input}</p> */}
       </div>
     </div>
   ) : (

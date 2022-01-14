@@ -2,7 +2,6 @@ import React from "react";
 import "./Cocktail.css";
 
 function Cocktail({ cocktail }) {
-  //   const ct = cocktail.drinks[0];
   return (
     <div>
       <h1>{cocktail.drinks[0].strDrink}</h1>
