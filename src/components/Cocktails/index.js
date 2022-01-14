@@ -30,7 +30,7 @@ function Cocktails({ cockSearch }) {
     <div>
       <button onClick={handleClick}></button>
       <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>
-      <Cocktail cocktail={...cocktail} />
+      <Cocktail cocktail={cocktail} />
     </div>
   ) : (
     <>Nothing here yet</>
