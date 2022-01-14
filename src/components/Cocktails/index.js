@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 function Cocktails() {
   const [cocktail, setCocktail] = useState("");
   const [btnClick, setBtnClick] = useState(false);
+  //const [cockSearch, setCockSearch] = useState();
 
   useEffect(() => {
     async function fetchCock() {
@@ -23,6 +24,7 @@ function Cocktails() {
       }
     }
     fetchCock();
+    setBtnClick(false);
   }, [btnClick]);
 
   function handleClick() {
@@ -30,20 +32,31 @@ function Cocktails() {
   }
   console.log(cocktail);
 
+  function handleChange(event) {
+    //cockSearch = event.target.value;
+    //setCockSearch(cockSearch);
+  }
+
   // <h1>Cocktail Name: {cocktail.drinks[0].strDrink}</h1>;
   return cocktail ? (
     <div>
       <nav>
-        <h1>Cocktail Friend</h1>
+        <h1 id="title">Cocktail Friend</h1>
       </nav>
-      <Button variant="contained" onClick={handleClick}>
-        Search Cocktails
-      </Button>
-      <TextField
-        id="outlined-basic"
-        label="Search for a cocktail..."
-        variant="outlined"
-      />
+      <div id="search-box">
+        <TextField
+          id="outlined-basic"
+          label="Search for a cocktail..."
+          variant="outlined"
+          onChange={handleChange}
+        />
+
+        <div id="input-field-div">
+          <Button id="search-btn" variant="contained" onClick={handleClick}>
+            Search Cocktails
+          </Button>
+        </div>
+      </div>
       <Cocktail cocktail={cocktail} />
     </div>
   ) : (

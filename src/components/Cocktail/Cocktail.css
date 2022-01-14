@@ -1,0 +1,12 @@
+#flex-div {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  margin: 30px 0 30px 300px;
+  overflow: hidden;
+}
